@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f3ff"><meta name="description" content="Сладкая игра три в ряд: конфеты, каскады и маленькие победы."><title>Сладкая искра · Три в ряд</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="https://st.max.ru/js/max-web-app.js" async></script><script type="module" src="app.mjs"></script></head>
+<body>
+<div class="ambient a" aria-hidden="true">✦</div><div class="ambient b" aria-hidden="true">✧</div><div class="ambient c" aria-hidden="true">✦</div>
+<main class="app">
+ <header><a class="brand" href="./" aria-label="Сладкая искра, главная"><span class="brand-mark">✦</span><span>сладкая<span class="brand-second">искра</span></span></a><div class="header-actions"><button class="icon-button" id="sound" aria-label="Включить звук" aria-pressed="false">♪</button><button class="icon-button" id="help" aria-label="Как играть">?</button></div></header>
+ <section class="intro"><div class="eyebrow"><span></span> МАЛЕНЬКИЙ ПЕРЕРЫВ, БОЛЬШАЯ РАДОСТЬ</div><h1>Поймай сладкий <em>момент.</em></h1><p>Соединяй конфеты. Собирай искры. Улыбайся.</p></section>
+ <div class="play-layout"><aside class="side-note"><span class="note-icon">✧</span><h2>Немного магии<br>в каждом ходе</h2><p>Три в ряд — хорошо.<br>Целый каскад — ещё лучше.</p><div class="mini-candies" aria-hidden="true">◆ <span>●</span> ◆</div><div class="tip-label">БЕЗ СПЕШКИ И ТАЙМЕРОВ</div></aside>
+ <section class="game" aria-label="Игра три в ряд">
+  <div class="game-top"><span class="level-pill">✦ <span id="level">Уровень 1</span></span><span class="best">Рекорд <b id="best">0</b></span></div>
+  <div class="collection-tools"><button id="levels" class="collection-button">▦ 100 уровней</button><button id="theme" class="collection-button">🍬 Конфеты ▾</button></div>
+  <p id="world-name" class="world-name">Сахарный сад</p>
+  <div class="stats"><div><span>ОЧКИ</span><strong id="score">0</strong></div><div class="moves"><span>ХОДЫ</span><strong id="moves">26</strong></div><div><span>ЦЕЛЬ</span><strong id="target">900</strong></div></div>
+  <div class="progress" role="progressbar" aria-label="Прогресс уровня" aria-valuemin="0" aria-valuemax="900" aria-valuenow="0"><div id="progress"></div><span>✦</span></div>
+  <div class="board-wrap"><div id="board" class="board" role="group" aria-label="Поле 8 на 8"></div><div class="combo" id="combo" aria-hidden="true"></div></div>
+  <div class="game-message" id="message" role="status" aria-live="polite">Твой следующий ход может быть волшебным ✨</div>
+  <div class="game-controls"><button id="hint" class="soft-button">✧ Подсказка</button><button id="restart" class="soft-button">↻ Заново</button></div>
+ </section>
+ <aside class="how-note"><div class="step-number">01 — 02 — 03</div><h2>Меняй.<br>Собирай.<br><em>Сияй.</em></h2><p>Поменяй местами соседние конфеты, чтобы собрать от трёх одинаковых.</p><div class="little-star">✦</div></aside></div>
+ <footer><span>Сделай день чуть слаще</span><span class="footer-star">✦</span><span>Три в ряд · для MAX и браузера</span></footer>
+</main>
+<dialog id="picker" class="picker"><div class="picker-heading"><h2 id="picker-title">Чем играем?</h2><button id="picker-close" class="icon-button" aria-label="Закрыть выбор">×</button></div><div id="picker-content"></div></dialog>
+<dialog id="modal"><div class="modal-art" id="modal-art">✦</div><h2 id="modal-title"></h2><p id="modal-text"></p><button class="primary-button" id="modal-action">Продолжить</button><button class="text-button" id="modal-cancel">Вернуться в игру</button></dialog>
+</body></html>
