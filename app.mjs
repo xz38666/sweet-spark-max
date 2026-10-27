@@ -14,7 +14,7 @@ function render(drops=[]){
  if(focused!==undefined&&!busy)$('board').children[Number(focused)]?.focus({preventScroll:true});update();scheduleHint();
 }
 function canHint(){return !busy&&!finished&&!document.hidden&&!$('modal').open&&!$('picker').open;}
-function scheduleHint(){clearTimeout(hintTimer);if(canHint())hintTimer=setTimeout(()=>showHint(true),10000);}
+function scheduleHint(){clearTimeout(hintTimer);if(canHint())hintTimer=setTimeout(()=>showHint(true),50000);}
 function showHint(automatic=false){
  clearTimeout(hintTimer);if(!canHint())return;
  const hint=legalMoves(board)[0];if(!hint)return;
